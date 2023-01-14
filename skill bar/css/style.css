@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e90ff;
+}
+.skill-bx{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    place-items: center;
+    margin-top: 20px;
+    background: #fff;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  .skill-bx .left-bx{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .skill-bx .right-bx{
+    width: 100%;
+    display: flex;
+    flex-direction: column
+  
+  }
+  
+  .skill-bx .bar{
+    width: 100%;
+    margin: 20px 0;
+  }
+  .skill-bx .bar:first-child{
+    margin-top: 0;
+  }
+  
+  .skill-bx .bar .info{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .skill-bx .bar .info span{
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+  }
+  
+  @keyframes showText {
+    100%{
+      opacity: 1;
+    }
+  }
+  .skill-bx .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #808e9b;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+  
+  .skill-bx .progress-line span{
+    height: 100%;
+    background:#ff4757;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  }
+   
+  
+  
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  
+  .skill-bx .progress-line.html span{
+    width: 90%;
+  }
+  
+  .skill-bx .progress-line.css span{
+    width: 80%;
+  }
+  
+  .skill-bx .progress-line.javascript span{
+    width: 75%;
+  }
+  
+  .skill-bx .progress-line.php span{
+    width: 80%;
+  }
+  
+  .skill-bx .progress-line.cms span{
+    width: 90%;
+  }
+  
+  .skill-bx .progress-line.photoshop span{
+    width: 55%;
+  }
+  
+  .skill-bx .progress-line span::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+  }
+  
+  .skill-bx .progress-line span::after{
+    position: absolute;
+    right: -12px;
+    top: -28px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+    
+  }
+  
+  @keyframes showText2 {
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  .skill-bx .progress-line.html span::after{
+    content: '90%';
+  }
+  
+  .skill-bx .progress-line.css span::after{
+    content: '80%';
+  }
+  
+  .skill-bx .progress-line.javascript span::after{
+    content: '75%';
+  }
+  
+  .skill-bx .progress-line.php span::after{
+    content: '80%';
+  }
+  
+  .skill-bx .progress-line.cms span::after{
+    content: '90%';
+  }
+  
+  .skill-bx .progress-line.photoshop span::after{
+    content: '55%';
+  }
+
+  @media screen and (max-width: 768px) {
+    .skill-bx {
+        grid-template-columns: 1fr;
+        padding: 50px;
+        gap: 20px;
+    }
+  }
+    
